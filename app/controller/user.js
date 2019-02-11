@@ -65,6 +65,12 @@ class UserController extends Controller {
 
     }
 
+    async resultQuery() {
+        let result = this.ctx.query;
+        console.log(result);
+        
+    }
+
  
 }
 

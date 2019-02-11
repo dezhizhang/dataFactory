@@ -17,6 +17,10 @@ module.exports = app => {
 
   //指标结果字典查询
   router.post('/dataFactory/tableList',controller.user.tableList);
+
+  //结果字典查询
+  router.get('/dataFactory/resultQuery',controller.user.resultQuery);
+  
   
 
 
