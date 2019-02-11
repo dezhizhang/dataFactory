@@ -24,6 +24,7 @@ class UserController extends Controller {
 
     }
 
+    //指标集查询
     async searchParam() {
 
         let result = await this.ctx.model.Indicators.find();
@@ -31,6 +32,28 @@ class UserController extends Controller {
             code:200,
             message:'成功',
             data:result
+        }
+
+    }
+
+    async listPrice() {
+        let result = this.ctx.request.body;
+
+        // let data = new this.ctx.model.Price({
+        //     count:2000,
+        //     operator:'<=',
+        //     hitRule:'查得',
+        //     price:1.00
+        // })
+
+        // let res = await data.save();
+
+        let data = await this.ctx.model.Price.find();
+        
+        this.ctx.body = {
+            code:200,
+            message:'成功',
+            data:data
         }
 
     }
