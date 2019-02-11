@@ -35,21 +35,28 @@ class UserController extends Controller {
         }
 
     }
-
+    //指标价格
     async listPrice() {
         let result = this.ctx.request.body;
 
-        // let data = new this.ctx.model.Price({
-        //     count:2000,
-        //     operator:'<=',
-        //     hitRule:'查得',
-        //     price:1.00
-        // })
-
-        // let res = await data.save();
 
         let data = await this.ctx.model.Price.find();
-        
+
+        this.ctx.body = {
+            code:200,
+            message:'成功',
+            data:data
+        }
+
+    }
+
+    //结果字典
+    async tableList() {
+        let result = this.ctx.request.body;
+
+
+        let data = await this.ctx.model.Result.find();
+
         this.ctx.body = {
             code:200,
             message:'成功',

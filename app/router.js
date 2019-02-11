@@ -15,6 +15,10 @@ module.exports = app => {
   //指标阶梯价格查询
   router.post('/dataFactory/listPrice',controller.user.listPrice);
 
+  //指标结果字典查询
+  router.post('/dataFactory/tableList',controller.user.tableList);
+  
+
 
 
 
