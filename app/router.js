@@ -23,8 +23,14 @@ module.exports = app => {
 
   //指标编号查询
   router.post('/dataFactory/resultIndex',controller.user.resultIndex);
+  //指标缓存策略
+  router.post('/dataFactory/listAttribute',controller.user.listAttribute);
+  //指标缓存删除
+  router.post('/dataFactory/tableDelete',controller.user.tableDelete);
 
-  router.post('/dataFactory/listAttribute',controller.user.listAttribute)
+  //指标缓存删除所有的
+  router.post('/dataFactory/tableAllData',controller.user.tableAllData);
+
 
   
   

@@ -101,12 +101,69 @@ class UserController extends Controller {
         let data = await this.ctx.model.Update.find();
         let total = await this.ctx.model.Update.find().count();
 
+        // let res = new this.ctx.model.Update({
+        //     apiCode:'013',
+        //     name:'小智',
+        //     internalCode:'00B',
+        //     operator:'自有',
+        //     UpdateStrategy:'post',
+        //     category:'全部',
+        // })
+
+        // await res.save();
+
+
         this.ctx.body = {
             code:200,
             message:'success',
             rows:data,
             total:total
         }
+    }
+
+    //指标缓存册除
+    async tableDelete() {
+        let result = this.ctx.request.body;
+        
+        let data = await this.ctx.model.Update.remove(result);
+
+        this.ctx.body = {
+            code:200,
+            message:'success',
+            data:data
+        }
+
+    }
+
+
+    //指标缓存删除所有
+    async tableAllData() {
+        let result =  this.ctx.request.body;
+
+        let res = [];
+
+        
+        for(let i=0;i<result.length;i++){
+             res = await this.ctx.model.Update.remove(result[i]);
+
+        }
+
+      
+        if(res.ok) {
+            this.ctx.body = {
+                code:200,
+                message:'success'
+            }
+        } else {
+            this.ctx.body = {
+                code:404,
+                message:'没有可删除的了'
+            }
+        }
+    
+       
+        
+        
     }
 
  
