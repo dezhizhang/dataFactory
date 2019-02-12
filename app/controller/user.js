@@ -93,10 +93,20 @@ class UserController extends Controller {
 
         }
 
-      
+    }
 
+    //指标缓存策略
+    async listAttribute() {
         
+        let data = await this.ctx.model.Update.find();
+        let total = await this.ctx.model.Update.find().count();
 
+        this.ctx.body = {
+            code:200,
+            message:'success',
+            rows:data,
+            total:total
+        }
     }
 
  

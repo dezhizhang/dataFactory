@@ -24,6 +24,8 @@ module.exports = app => {
   //指标编号查询
   router.post('/dataFactory/resultIndex',controller.user.resultIndex);
 
+  router.post('/dataFactory/listAttribute',controller.user.listAttribute)
+
   
   
 
