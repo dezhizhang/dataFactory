@@ -59,16 +59,44 @@ class UserController extends Controller {
 
         this.ctx.body = {
             code:200,
-            message:'成功',
+            message:'success',
             data:data
         }
 
     }
 
+    //结果字典查询功能
     async resultQuery() {
         let result = this.ctx.query;
-        console.log(result);
+        let data = await this.ctx.model.Result.find(result);
+      
+        this.ctx.body = {
+            code:200,
+            message:'success',
+            data:data
+        }
+
+       
+    
+    }
+    //指标编号查询
+    async resultIndex() {
+        let result = this.ctx.request.body;
+       
+        let data = await this.ctx.model.Index.find(result);
+    
+
+        this.ctx.body = {
+            code:200,
+            message:'success',
+            data:data
+
+        }
+
+      
+
         
+
     }
 
  

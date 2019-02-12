@@ -20,6 +20,10 @@ module.exports = app => {
 
   //结果字典查询
   router.get('/dataFactory/resultQuery',controller.user.resultQuery);
+
+  //指标编号查询
+  router.post('/dataFactory/resultIndex',controller.user.resultIndex);
+
   
   
 
