@@ -28,6 +28,21 @@ class UserController extends Controller {
     async searchParam() {
 
         let result = await this.ctx.model.Indicators.find();
+
+        // let res = new this.ctx.model.Indicators({
+        //     apiCode:'0002',
+        //     name:'小智',
+        //     isMulriple:true,
+        //     operator:'第三方',
+        //     category:'运营商',
+        //     tags:'小智',
+        //     resultExample:'json',
+        //     unit:'100',
+        //     description:'小智数据工厂'
+        // })
+
+        // await res.save();
+
         this.ctx.body = {
             code:200,
             message:'成功',
@@ -252,6 +267,20 @@ class UserController extends Controller {
             }
         }
 
+
+    }
+
+    async tableListSearch() {
+        let result = this.ctx.request.body;
+
+    
+        let data = await this.ctx.model.Indicators.find(result);
+     
+        this.ctx.body = {
+            code:200,
+            message:'success',
+            data:data
+        }
 
     }
 

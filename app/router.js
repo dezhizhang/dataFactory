@@ -45,6 +45,11 @@ module.exports = app => {
 
   //指标重试删除所有的
   router.post('/dataFactory/tableAllDeleteRetry',controller.user.tableAllDeleteRetry);
+
+  //指标管理查询
+  router.post('/dataFactory/tableListSearch',controller.user.tableListSearch);
+
+
   
 
 
