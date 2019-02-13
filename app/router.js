@@ -49,6 +49,13 @@ module.exports = app => {
   //指标管理查询
   router.post('/dataFactory/tableListSearch',controller.user.tableListSearch);
 
+  //指标缓存查询
+  router.post('/dataFactory/tableSearchUpdate',controller.user.tableSearchUpdate);
+
+
+  //指标重试查询
+  router.post('/dataFactory/tableSeachRetry',controller.user.tableSeachRetry)
+
 
   
 

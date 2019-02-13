@@ -8,7 +8,7 @@ module.exports = app => {
         name:{ type:String },
         internalCode:{ type:String },
         operator:{ type:String },
-        UpdateStrategy:{ type:String },
+        updateStrategy:{ type:String },
         category:{ type:String }
 
     })

@@ -269,7 +269,8 @@ class UserController extends Controller {
 
 
     }
-
+    
+    //指标管理查询
     async tableListSearch() {
         let result = this.ctx.request.body;
 
@@ -282,6 +283,32 @@ class UserController extends Controller {
             data:data
         }
 
+    }
+
+    //指标缓存查询
+    async tableSearchUpdate() {
+        let result = this.ctx.request.body;
+
+        let data = await this.ctx.model.Update.find(result);
+
+        this.ctx.body = {
+            code:200,
+            message:'success',
+            data:data,
+        }
+    }
+
+    //指标重试查询
+    async tableSeachRetry() {
+        let result = this.ctx.request.body;
+
+        let data = await this.ctx.model.Retry.find(result);
+
+        this.ctx.body = {
+            code:200,
+            message:'success',
+            data:data
+        }
     }
 
 
