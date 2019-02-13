@@ -212,6 +212,50 @@ class UserController extends Controller {
 
     }
 
+    //指标重试删除单项
+    async tableDeleteRetry() {
+        let result = this.ctx.request.body;
+        
+
+        let data = await this.ctx.model.Retry.remove(result);
+
+
+        this.ctx.body = {
+            code:200,
+            message:'success',
+
+        }
+
+    }
+
+    //指标重试删除所有的
+    async tableAllDeleteRetry() {
+        let result = this.ctx.request.body;
+
+       
+
+        let res = [];
+        for(let i=0;i<result.length;i++){
+            res = await this.ctx.model.Retry.remove(result[i]);
+
+        }
+
+        if(res.ok) {
+            this.ctx.body = {
+                code:200,
+                message:'success'
+            }
+        } else {
+            this.ctx.body = {
+                code:404,
+                message:'没有可删除的了'
+            }
+        }
+
+
+    }
+
+
  
 }
 

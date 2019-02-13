@@ -40,6 +40,18 @@ module.exports = app => {
   //指标重试查询
   router.post('/dataFactory/listAttributeTable',controller.user.listAttributeTable);
 
+  //指标重试删除单项
+  router.post('/dataFactory/tableDeleteRetry',controller.user.tableDeleteRetry);
+
+  //指标重试删除所有的
+  router.post('/dataFactory/tableAllDeleteRetry',controller.user.tableAllDeleteRetry);
+  
+
+
+
+
+
+
 
 
 };
