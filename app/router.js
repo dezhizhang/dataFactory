@@ -31,11 +31,14 @@ module.exports = app => {
   //指标缓存删除所有的
   router.post('/dataFactory/tableAllData',controller.user.tableAllData);
 
+  //指标缓存添加
+  router.post('/dataFactory/addAttribute',controller.user.addAttribute);
 
-  
-  
+  //添加指标重试
+  router.post('/dataFactory/addAttributeRetry',controller.user.addAttributeRetry);
 
-
+  //指标重试查询
+  router.post('/dataFactory/listAttributeTable',controller.user.listAttributeTable);
 
 
 

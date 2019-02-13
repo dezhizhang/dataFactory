@@ -161,9 +161,55 @@ class UserController extends Controller {
             }
         }
     
-       
+    
+    }
+
+    //指标缓存添加
+    async addAttribute() {
+        let result = this.ctx.request.body;
         
+
+        let data = new this.ctx.model.Update(result);
+
+        let res = await data.save();
+
+
+        this.ctx.body = {
+            code:200,
+            message:'success',
+            codeInfo:'添加成功'
+        }
+    }
+
+    //添加指标重试
+    async addAttributeRetry() {
+        let result = this.ctx.request.body;
         
+        let data = new this.ctx.model.Retry(result);
+
+        let res = await data.save();
+
+
+        this.ctx.body = {
+            code:200,
+            message:'success',
+            codeInfo:'添加成功'
+        }
+    }
+
+    //指标重试查询
+    async listAttributeTable() {
+        
+        let data = await this.ctx.model.Retry.find();
+        let total = await this.ctx.model.Retry.count();
+
+        this.ctx.body = {
+            code:200,
+            message:'success',
+            totla:total,
+            rows:data
+        }
+
     }
 
  
