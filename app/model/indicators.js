@@ -1,8 +1,6 @@
 module.exports = app => {
     const mongoose = app.mongoose;
     const Schema = mongoose.Schema;
-    
-
     const IndicatorsSchema = new Schema({
         apiCode:{ type:String },
         name:{ type:String },
