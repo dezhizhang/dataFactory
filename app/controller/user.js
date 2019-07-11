@@ -62,6 +62,15 @@ class UserController extends Controller {
         }
 
     }
+    //新增结果字典
+    async addResult() {
+        let result = this.ctx.request.body;
+        let data = new this.ctx.model.Result(result);
+        await data.save();
+    
+        this.ctx.body = '增加数据成功'
+ 
+    }
     //结果字典查询功能
     async resultQuery() {
         let result = this.ctx.query;

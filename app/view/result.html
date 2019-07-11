@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新增结果典</title>
+</head>
+<body>
+    <form method="POST" action="http://172.16.1.21:7002/dataFactory/addResult" >
+        原始字段:<input type="text" name="original"/><br/>
+        字段名称:<input type="text" name="name"/><br/>
+        字段类型:<input type="text" name="type"/><br/>
+        字段取值:<input type="text" name="values"/><br/>
+        含义:<input type="text" name="meaning"/><br/>
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>
