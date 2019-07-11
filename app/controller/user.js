@@ -32,6 +32,15 @@ class UserController extends Controller {
         }
 
     }
+    //新增指标管理
+    async addSearchParam() {
+       let result = this.ctx.request.body;
+       let data = new this.ctx.model.Indicators(result);
+       await data.save();
+       
+       this.ctx.body = '增加数据成功'
+
+    }
     //指标价格
     async listPrice() {
         let result = this.ctx.request.body;

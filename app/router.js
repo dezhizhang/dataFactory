@@ -11,6 +11,9 @@ module.exports = app => {
 
   //指标管理
   router.post('/dataFactory/searchParam',controller.user.searchParam);
+  //提增指示管理
+  router.post('/dataFactory/addSearchParam',controller.user.addSearchParam);
+  
 
   //指标阶梯价格查询
   router.post('/dataFactory/listPrice',controller.user.listPrice);

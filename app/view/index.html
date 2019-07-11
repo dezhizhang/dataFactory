@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>新增指示管理</title>
+</head>
+<body>
+    <form action="/dataFactory/addSearchParam" method="POST">
+        指标编号:<input type="text" name="apiCode"/><br/><br/>
+        指标名称:<input type="text" name="name"/><br/><br/>
+        是否复合接口:<input type="text" name="isMulriple"/><br/><br/>
+        来源:<input type="text" name="operator"/><br/><br/>
+        类型:<input type="text" name="category"/><br/><br/>
+        标记:<input type="text" name="tags"/><br/><br/>
+        结果格式:<input type="text" name="resultExample"/><br/><br/>
+        指标单价:<input type="text" name="unit"/><br/><br/>
+        备注:<input type="text" name="description"/><br/><br/>
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>

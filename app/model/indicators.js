@@ -4,7 +4,7 @@ module.exports = app => {
     const IndicatorsSchema = new Schema({
         apiCode:{ type:String },
         name:{ type:String },
-        isMulriple:{ type:Boolean },
+        isMulriple:{ type:String },
         operator:{ type:Number },
         category:{ type:String },
         tags:{ type:String },

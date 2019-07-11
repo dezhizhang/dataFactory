@@ -31,6 +31,10 @@ module.exports = appInfo => {
   };
 
 
+  //解析ejs模板
+  config.view = {
+    mapping: {'.html': 'ejs'} 
+  };
 
   return config;
 };
