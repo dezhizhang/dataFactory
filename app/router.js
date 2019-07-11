@@ -27,7 +27,6 @@ module.exports = app => {
   //新增结果字典数据
   router.post('/dataFactory/addResult',controller.user.addResult)
 
-
   //指标编号查询
   router.post('/dataFactory/resultIndex',controller.user.resultIndex);
   //指标缓存策略
