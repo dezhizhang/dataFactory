@@ -11,12 +11,15 @@ class UserController extends Controller {
         if(data.length > 0) {
             this.ctx.body = {
                 code:200,
-                message:'登录成功'
+                msg:'登录成功',
+                data:{
+                  token:'ssdklfhnfgkdhjfmdsjhbfdhjbfdsakl,fdjbkaafdlsgbnjkmdfgvl.vfgdvjknbm'
+                }
             }
         } else {
             this.ctx.body = {
                 code:404,
-                message:'传入参数有误'
+                msg:'传入参数有误'
             }
         }
 

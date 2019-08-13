@@ -10,7 +10,7 @@ module.exports = app => {
   router.get('/result',controller.home.result);
 
   //用户登录
-  router.post('/dataFactory/userLogin',controller.user.login);
+  router.post('/dataFactory/login',controller.user.login);
 
   //指标管理
   router.post('/dataFactory/searchParam',controller.user.searchParam);
