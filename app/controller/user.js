@@ -19,7 +19,7 @@ class UserController extends Controller {
         } else {
             this.ctx.body = {
                 code:404,
-                msg:'传入参数有误'
+                msg:'用户名或密码不对'
             }
         }
 
