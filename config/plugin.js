@@ -23,5 +23,10 @@ exports.passport = {
   enable: true,
   package: 'egg-passport',
 }
+//配置io
+exports.io = {
+  enable: true,
+  package: 'egg-socket.io',
+};
 
 
