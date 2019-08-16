@@ -9,7 +9,7 @@ module.exports = appInfo => {
   // add your config here
   config.middleware = [];
 
-  //配置数据库连接
+  // 配置数据库连接
   config.mongoose = {
     client: {
       url: 'mongodb://127.0.0.1/dataFactory',
@@ -25,15 +25,15 @@ module.exports = appInfo => {
   };
 
   config.security = {
-      csrf: {
-          enable: false,
-      }
+    csrf: {
+      enable: false,
+    },
   };
 
 
-  //解析ejs模板
+  // 解析ejs模板
   config.view = {
-    mapping: {'.html': 'ejs'} 
+    mapping: { '.html': 'ejs' },
   };
 
   return config;
