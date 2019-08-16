@@ -24,7 +24,4 @@ exports.passport = {
   package: 'egg-passport',
 }
 
-exports.passportGithub = {
-  enable: true,
-  package: 'egg-passport-github',
-}
+

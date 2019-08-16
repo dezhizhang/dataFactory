@@ -62,12 +62,6 @@ module.exports = app => {
   // 指标重试查询
   router.post('/dataFactory/tableSeachRetry', controller.user.tableSeachRetry);
 
-  // 示例接口
-  router.get('/api/example', controller.home.example);
-  //获取数据
-  router.get('/api/httpClient',controller.home.httpClient);
-  //获取post数据
-  router.post('/api/httpPOST',controller.home.httpPOST);
 
 
 
