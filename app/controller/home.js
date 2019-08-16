@@ -16,8 +16,43 @@ class HomeController extends Controller {
       mes: 'hello',
       data: null,
     };
-
   }
+
+  async httpClient() {
+    let result = await this.ctx.curl('https://cnodejs.org/api/v1/topics',{
+      dataType:'json',
+      timeout:3000
+    });
+    this.ctx.body = {
+      code:200,
+      msg:'SUCCESS',
+      data:result
+    }
+  }
+
+  async httpPOST() {
+ 
+
+    let result = await this.ctx.curl('https://httpbin.org/post',{
+      method:'POST',
+      contentType:'json',
+      data:{
+        hello:'world',
+        now:Date.now()
+      },
+      dataType:'json'
+    });
+
+    console.log(result);
+    
+    
+    this.ctx.body = {
+      code:200,
+      msg:'SUCCESS',
+      data:result
+    }
+  }
+
 }
 
 module.exports = HomeController;

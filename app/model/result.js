@@ -14,6 +14,4 @@ module.exports = app => {
   });
 
   return mongoose.model('Result', ResultSchema, 'result');
-
-
 };
