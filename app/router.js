@@ -61,11 +61,16 @@ module.exports = app => {
 
   // 指标重试查询
   router.post('/dataFactory/tableSeachRetry', controller.user.tableSeachRetry);
+  //用户登录
+  router.post('/risk/user/login',controller.risk.userLogin);
+
 
   //获取业务类型
   router.get('/risk/workBench/general/riskBizTypeInfo/:id',controller.risk.riskBizTypeInfo);
   //新增风控方案
   router.get('/risk/workBench/riskSchema/add',controller.risk.addRisk);
+  //规则组件
+  router.get('/risk/workBench/general/list',controller.risk.generalList);
 
 
 
