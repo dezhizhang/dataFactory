@@ -76,6 +76,20 @@ module.exports = app => {
 
 
 
+  //离线帐单列表
+  router.post('/fs/api/v1/offlineRecord/list',controller.account.list);
+  //获取客户下拉
+  router.get('/fs/api/v1/customerInfo/getCustomer',controller.account.customer)
+
+
+
+
+  
+
+
+
+
+
 
 
 
