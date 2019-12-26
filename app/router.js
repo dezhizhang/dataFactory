@@ -86,6 +86,16 @@ module.exports = app => {
   router.post('/fs/api/v1/offlineRecord/update',controller.account.update);
   //离线帐单删除
   router.get('/fs/api/v1/offlineRecord/delete/:id',controller.account.delete);
+  //离线明细api接口
+  router.get('/fs/api/v1/common/getAllApiInfo',controller.detail.info);
+  //离线明线列表
+  router.get('/fs/api/v1/offlineRecordApi/detail/:id',controller.detail.list);
+  //离线明细搜索
+  router.get('/fs/api/v1/offlineRecordApi/list',controller.detail.search);
+  //离线明细新增
+  router.post('/fs/api/v1/offlineRecordApi/save',controller.detail.add);
+  //离线明细删除
+  router.get('/fs/api/v1/offlineRecordApi/delete/:id',controller.detail.delete);
 
 
 
