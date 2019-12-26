@@ -96,6 +96,8 @@ module.exports = app => {
   router.post('/fs/api/v1/offlineRecordApi/save',controller.detail.add);
   //离线明细删除
   router.get('/fs/api/v1/offlineRecordApi/delete/:id',controller.detail.delete);
+  //离线明细更新
+  router.post('/fs/api/v1/offlineRecordApi/update',controller.detail.update);
 
 
 
