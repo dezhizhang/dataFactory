@@ -79,7 +79,13 @@ module.exports = app => {
   //离线帐单列表
   router.post('/fs/api/v1/offlineRecord/list',controller.account.list);
   //获取客户下拉
-  router.get('/fs/api/v1/customerInfo/getCustomer',controller.account.customer)
+  router.get('/fs/api/v1/customerInfo/getCustomer',controller.account.customer);
+  //离线帐单新增
+  router.post('/fs/api/v1/offlineRecord/save',controller.account.save);
+  //离线帐单列新
+  router.post('/fs/api/v1/offlineRecord/update',controller.account.update);
+  //离线帐单删除
+  router.get('/fs/api/v1/offlineRecord/delete/:id',controller.account.delete);
 
 
 
