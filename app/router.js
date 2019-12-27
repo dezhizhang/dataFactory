@@ -8,10 +8,8 @@ module.exports = app => {
   router.get('/', controller.home.index);
   // 新增结果字典
   router.get('/result', controller.home.result);
-
   // 用户登录
   router.post('/dataFactory/login', controller.user.login);
-
   // 指标管理
   router.post('/dataFactory/searchParam', controller.user.searchParam);
   // 提增指示管理
@@ -98,6 +96,10 @@ module.exports = app => {
   router.get('/fs/api/v1/offlineRecordApi/delete/:id',controller.detail.delete);
   //离线明细更新
   router.post('/fs/api/v1/offlineRecordApi/update',controller.detail.update);
+  //离线附件列表
+  router.get('/fs/api/v1/offlineRecordFile/list/:id',controller.attachment.list);
+  //离线附件类型
+  router.get('/fs/api/v1/offlineRecordFile/getFileType',controller.attachment.type);
 
 
 
