@@ -100,6 +100,8 @@ module.exports = app => {
   router.get('/fs/api/v1/offlineRecordFile/list/:id',controller.attachment.list);
   //离线附件类型
   router.get('/fs/api/v1/offlineRecordFile/getFileType',controller.attachment.type);
+  //离线附件下载
+  router.get('/fs/api/v1/offlineRecordFile/delete/:id',controller.attachment.delete);
 
 
 

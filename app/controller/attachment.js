@@ -81,6 +81,15 @@ class AttachmentController extends Controller {
             ]
         }
     }
+    async delete() {
+        let result = this.ctx.params;
+        console.log(result);
+        this.ctx.body = {
+            code:200,
+            msg:"SUCCESS",
+            data:null
+        }
+    }
 
 }
 
