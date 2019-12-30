@@ -11,7 +11,7 @@ class AccountController extends Controller {
             code:200,
             msg:'SUCCESS',
             data:{
-                "total": 1,
+                "total": 30,
                 "rows": [
                 {
                     "id": "OR892694",
@@ -28,7 +28,105 @@ class AccountController extends Controller {
                     "createdBy": '小智',
                     "updatedTime": "2019-12-17 18:45:12",
                     "recordMode": 1
-                }
+                },
+                {
+                    "id": "OR892695",
+                    "custId": "CNO996520",
+                    "mode": 1,
+                    "createdTime": "2019-12-17 18:42:28",
+                    "chargingCount": 54,
+                    "unchargingCount": 354,
+                    "queryCount": 537,
+                    "chargingSum": 888.0,
+                    "description": "lalala",
+                    "available": true,
+                    "name": "yy",
+                    "createdBy": '小智',
+                    "updatedTime": "2019-12-17 18:45:12",
+                    "recordMode": 1
+                },
+                {
+                    "id": "OR892696",
+                    "custId": "CNO996520",
+                    "mode": 1,
+                    "createdTime": "2019-12-17 18:42:28",
+                    "chargingCount": 54,
+                    "unchargingCount": 354,
+                    "queryCount": 537,
+                    "chargingSum": 888.0,
+                    "description": "lalala",
+                    "available": true,
+                    "name": "yy",
+                    "createdBy": '小智',
+                    "updatedTime": "2019-12-17 18:45:12",
+                    "recordMode": 1
+                },
+                {
+                    "id": "OR892697",
+                    "custId": "CNO996520",
+                    "mode": 1,
+                    "createdTime": "2019-12-17 18:42:28",
+                    "chargingCount": 54,
+                    "unchargingCount": 354,
+                    "queryCount": 537,
+                    "chargingSum": 888.0,
+                    "description": "lalala",
+                    "available": true,
+                    "name": "yy",
+                    "createdBy": '小智',
+                    "updatedTime": "2019-12-17 18:45:12",
+                    "recordMode": 1
+                },
+                {
+                    "id": "OR892618",
+                    "custId": "CNO996520",
+                    "mode": 1,
+                    "createdTime": "2019-12-17 18:42:28",
+                    "chargingCount": 54,
+                    "unchargingCount": 354,
+                    "queryCount": 537,
+                    "chargingSum": 888.0,
+                    "description": "lalala",
+                    "available": true,
+                    "name": "yy",
+                    "createdBy": '小智',
+                    "updatedTime": "2019-12-17 18:45:12",
+                    "recordMode": 1
+                },
+                {
+                    "id": "OR892619",
+                    "custId": "CNO996520",
+                    "mode": 1,
+                    "createdTime": "2019-12-17 18:42:28",
+                    "chargingCount": 54,
+                    "unchargingCount": 354,
+                    "queryCount": 537,
+                    "chargingSum": 888.0,
+                    "description": "lalala",
+                    "available": true,
+                    "name": "yy",
+                    "createdBy": '小智',
+                    "updatedTime": "2019-12-17 18:45:12",
+                    "recordMode": 1
+                },
+                {
+                    "id": "OR892620",
+                    "custId": "CNO996520",
+                    "mode": 1,
+                    "createdTime": "2019-12-17 18:42:28",
+                    "chargingCount": 54,
+                    "unchargingCount": 354,
+                    "queryCount": 537,
+                    "chargingSum": 888.0,
+                    "description": "lalala",
+                    "available": true,
+                    "name": "yy",
+                    "createdBy": '小智',
+                    "updatedTime": "2019-12-17 18:45:12",
+                    "recordMode": 1
+                },
+
+                
                 ]
             }
         }
