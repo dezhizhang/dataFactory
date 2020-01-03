@@ -104,6 +104,12 @@ module.exports = app => {
   router.get('/fs/api/v1/offlineRecordFile/delete/:id',controller.attachment.delete);
   //账单列表
   router.get("/fs/api/v1/sjyzdgl/maintain/bills",controller.maintain.list)
+  //帐单历史记录
+  router.get("/fs/api/v1/sjyzdgl/maintain/billMaintainList/:id",controller.history.list);
+  //帐单明细
+  router.get("/fs/api/v1/sjyzdgl/maintain/billSummary/:id",controller.maintain.sum);
+  //帐单明细列表
+  router.get("/fs/api/v1/sjyzdgl/maintain/billDetail/:id",controller.maintain.info)
 
 
 

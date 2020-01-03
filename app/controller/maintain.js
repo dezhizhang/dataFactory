@@ -85,6 +85,90 @@ class HomeController extends Controller {
     await this.ctx.render('result');
   }
 
+  async sum() {
+    this.ctx.body = {
+      code:200,
+      msg:"SUCCESS",
+      data:{
+        billId:"1223541",
+        chargingSum:"120.00",
+        freeSum:"12.00",
+        realSum:"14.00"
+      }
+    }
+  }
+  async info() {
+    let result = this.ctx.query;
+    console.log(result);
+
+    this.ctx.body = {
+      code:200,
+      msg:"SUCCESS",
+      data:{
+        "size": 100,
+        "data": [
+            {
+                "id": "94f0598711994bb4a0725165f44",
+                "apiCode": "SCqry0006",
+                "apiName": "手机状态",
+                "operation": "CUCC",
+                "price": 0.72,
+                "chargingCount": 0,
+                "unchargingCount": 20465,
+                "queryCount": 20465,
+                "chargingSum": 14734.80,
+                "billId": "020623c3728c4195bc490fa2c27",
+                "successCount": 100,
+                "failureCount": 120
+            },
+            {
+              "id": "94f0598711994bb4a05165f4491b0f",
+              "apiCode": "SCqry0006",
+              "apiName": "手机状态",
+              "operation": "CUCC",
+              "price": 0.72,
+              "chargingCount": 0,
+              "unchargingCount": 20465,
+              "queryCount": 20465,
+              "chargingSum": 14734.80,
+              "billId": "020623c3728c4195bc490fa2c27c3",
+              "successCount": 140,
+              "failureCount": 150
+          },
+          {
+            "id": "94f0598711994bb4a0725165f449",
+            "apiCode": "SCqry0006",
+            "apiName": "手机状态",
+            "operation": "CUCC",
+            "price": 0.72,
+            "chargingCount": 0,
+            "unchargingCount": 20465,
+            "queryCount": 20465,
+            "chargingSum": 14734.80,
+            "billId": "020623c3728c4195bc490fa2cc3a8e",
+            "successCount": 22,
+            "failureCount": 77
+        },
+        {
+                "id": "94f0598711994bb4a072516591b0f",
+                "apiCode": "SCqry0006",
+                "apiName": "手机状态",
+                "operation": "CUCC",
+                "price": 0.72,
+                "chargingCount": 0,
+                "unchargingCount": 20465,
+                "queryCount": 20465,
+                "chargingSum": 14734.80,
+                "billId": "020623c3728c4195bc490fa2c3a8e",
+                "successCount": 80,
+                "failureCount": 66
+            }
+        ]
+      }
+    }
+  }
+
+
 
 }
 
