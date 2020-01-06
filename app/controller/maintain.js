@@ -97,6 +97,15 @@ class HomeController extends Controller {
       }
     }
   }
+
+  async add() {
+    let result = this.ctx.request.body;
+    this.ctx.body = {
+      code:200,
+      msg:"SUCCESS",
+      data:null
+    }
+  }
   async info() {
     let result = this.ctx.query;
     console.log(result);

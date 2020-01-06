@@ -109,7 +109,9 @@ module.exports = app => {
   //帐单明细
   router.get("/fs/api/v1/sjyzdgl/maintain/billSummary/:id",controller.maintain.sum);
   //帐单明细列表
-  router.get("/fs/api/v1/sjyzdgl/maintain/billDetail/:id",controller.maintain.info)
+  router.get("/fs/api/v1/sjyzdgl/maintain/billDetail/:id",controller.maintain.info);
+  //帐单明细新增
+  router.post("/fs/api/v1/sjyzdgl/maintain/addBillDetail",controller.maintain.add);
 
 
 
