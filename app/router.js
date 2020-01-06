@@ -112,6 +112,10 @@ module.exports = app => {
   router.get("/fs/api/v1/sjyzdgl/maintain/billDetail/:id",controller.maintain.info);
   //帐单明细新增
   router.post("/fs/api/v1/sjyzdgl/maintain/addBillDetail",controller.maintain.add);
+  //帐单明细删除
+  router.get("/fs/api/v1/sjyzdgl/maintain/deleteBillDetail/:id",controller.maintain.delete);
+  //帐单明细更新
+  router.post("/fs/api/v1/sjyzdgl/maintain/updateBillDetail/:id",controller.maintain.update);
 
 
 

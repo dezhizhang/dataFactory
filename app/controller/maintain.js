@@ -106,6 +106,24 @@ class HomeController extends Controller {
       data:null
     }
   }
+  async delete() {
+    let result = this.ctx.query;
+    console.log(result);
+    this.ctx.body = {
+      code:200,
+      msg:"删除成功",
+      data:null
+    }
+  }
+  async update() {
+    let result = this.ctx.request.body;
+    console.log(result);
+    this.ctx.body = {
+      code:200,
+      msg:"更新成功",
+      data:null
+    }
+  }
   async info() {
     let result = this.ctx.query;
     console.log(result);
